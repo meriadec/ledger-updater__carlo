@@ -4,7 +4,7 @@
   "scripts": {
     "start": "bash scripts/start.sh",
     "build": "bash scripts/build.sh",
-    "pkg": "yarn build && pkg package.json --target node10 --out-path dist"
+    "pkg": "yarn build && pkg package.json --out-path dist"
   },
   "bin": {
     "ledger-updater": "./dist/main.js"
