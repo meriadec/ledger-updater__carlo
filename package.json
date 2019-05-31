@@ -1,0 +1,36 @@
+{
+  "name": "ledger-updater",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "start": "bash scripts/start.sh",
+    "build": "bash scripts/build.sh",
+    "pkg": "yarn build && pkg package.json --target node10 --out-path dist"
+  },
+  "bin": {
+    "ledger-updater": "./dist/main.js"
+  },
+  "pkg": {
+    "scripts": "dist/main.js",
+    "assets": "dist/*"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.4.4",
+    "@ledgerhq/errors": "^4.60.0",
+    "@ledgerhq/hw-transport": "^4.60.3",
+    "@ledgerhq/live-common": "^5.12.1",
+    "carlo": "^0.9.45",
+    "invariant": "^2.2.4",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "rxjs": "^6.5.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@ledgerhq/hw-transport-node-hid-noevents": "^4.60.3",
+    "parcel-bundler": "^1.12.3",
+    "pkg": "^4.4.0",
+    "prettier": "^1.17.1",
+    "typescript": "^3.5.1"
+  }
+}
